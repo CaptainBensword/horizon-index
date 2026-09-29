@@ -1,74 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizon Index</title>
-  <meta name="description" content="The official encyclopedia and database for the Horizon book series.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizon Index</title>
+<meta name="description" content="Horizon Index — an archive of records from the Horizon book series.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">H</span>
-      <span class="brand-type"><span class="mini-horizon">HORIZON</span> <b>INDEX</b></span>
+<div class="scanlines" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Horizon Index home">
+    <span class="brand-mark">H</span>
+    <span class="brand-name"><b>HORIZON</b><span>INDEX</span></span>
+  </a>
+  <div class="system-status"><i></i> ARCHIVE ONLINE</div>
+  <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="spawn.html">Spawn</a>
+    <a href="aether.html">Aether</a>
+    <a href="relics.html">Relics</a>
+    <a href="locations.html">Locations</a>
+    <a href="history.html">History</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="books.html">Books</a>
+  </nav>
+</header>
+
+<main>
+  <section class="terminal-hero">
+    <div class="terminal-label"><span>INDEX SYSTEM</span><span>ARCHIVE / 01</span></div>
+    <div class="hero-logo">
+      <div class="horizon-word"><span>H</span><span>O</span><span>R</span><span>I</span><span>Z</span><span>O</span><span>N</span></div>
+      <div class="index-word">INDEX</div>
+    </div>
+    <div class="hero-copy">
+      <div class="hero-line"></div>
+      <p>WORLD RECORD ARCHIVE</p>
+      <span>Search documented records from the world of Horizon.</span>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-symbol">⌕</span>
+      <input id="search" type="search" autocomplete="off" placeholder="Search archive records..." oninput="searchSite(this.value)">
+      <span class="search-key">ENTER</span>
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+  </section>
+
+  <section class="archive-head">
+    <div>
+      <span class="eyebrow">ARCHIVE SYSTEMS</span>
+      <h1>Select a record system.</h1>
+    </div>
+    <span class="archive-count">07 SYSTEMS</span>
+  </section>
+
+  <section class="record-grid">
+    <a class="record-card record-card-large" href="spawn.html">
+      <span class="record-id">SYS / 01</span>
+      <div class="record-icon">◈</div>
+      <div class="record-text"><h2>Spawn</h2><p>Species and documented Spawn records.</p></div>
+      <span class="record-arrow">↗</span>
     </a>
-    <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
-    <nav id="nav">
-      <a href="characters.html">Characters</a>
-      <a href="spawn.html">Spawn Encyclopedia</a>
-      <a href="locations.html">Locations</a>
-      <a href="history.html">World History</a>
-      <a href="aether.html">Aether</a>
-      <a href="relics.html">Relics</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="books.html">Books</a>
-    </nav>
-  </header>
+    <a class="record-card" href="aether.html">
+      <span class="record-id">SYS / 02</span><div class="record-icon">◇</div>
+      <div class="record-text"><h2>Aether</h2><p>Records concerning Aether.</p></div><span class="record-arrow">↗</span>
+    </a>
+    <a class="record-card" href="relics.html">
+      <span class="record-id">SYS / 03</span><div class="record-icon">◆</div>
+      <div class="record-text"><h2>Relics</h2><p>Documented Relic records.</p></div><span class="record-arrow">↗</span>
+    </a>
+    <a class="record-card" href="locations.html">
+      <span class="record-id">SYS / 04</span><div class="record-icon">⌖</div>
+      <div class="record-text"><h2>Locations</h2><p>Places and regions on record.</p></div><span class="record-arrow">↗</span>
+    </a>
+    <a class="record-card" href="history.html">
+      <span class="record-id">SYS / 05</span><div class="record-icon">▤</div>
+      <div class="record-text"><h2>History</h2><p>Historical records and events.</p></div><span class="record-arrow">↗</span>
+    </a>
+    <a class="record-card" href="timeline.html">
+      <span class="record-id">SYS / 06</span><div class="record-icon">◷</div>
+      <div class="record-text"><h2>Timeline</h2><p>Chronological records.</p></div><span class="record-arrow">↗</span>
+    </a>
+    <a class="record-card" href="books.html">
+      <span class="record-id">SYS / 07</span><div class="record-icon">▥</div>
+      <div class="record-text"><h2>Books</h2><p>The Horizon book archive.</p></div><span class="record-arrow">↗</span>
+    </a>
+  </section>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow">HORIZON / DATABASE</div>
-      <div class="wordmark" aria-label="Horizon Index">
-        <div class="horizon-logo">
-          <span>H</span><span class="star-o">✦</span><span>R</span><span>I</span><span>Z</span><span>O</span><span>N</span>
-        </div>
-        <div class="index-logo">INDEX</div>
-      </div>
-      <p>The official encyclopedia and database for the Horizon book series.</p>
+  <section class="archive-notice">
+    <span class="notice-mark">!</span>
+    <div><strong>ARCHIVE NOTE</strong><p>Records are added as information is established for the Horizon series.</p></div>
+  </section>
+</main>
 
-      <div class="search-wrap">
-        <span>⌕</span>
-        <input id="search" type="search" placeholder="Search the Horizon Index…" oninput="searchSite(this.value)">
-        <kbd>SEARCH</kbd>
-      </div>
-      <div id="search-results" class="search-results"></div>
-    </section>
-
-    <section class="section-heading">
-      <div>
-        <span class="eyebrow">ARCHIVE</span>
-        <h2>Explore the Index</h2>
-      </div>
-      <span class="count">08 SECTIONS</span>
-    </section>
-
-    <section class="card-grid">
-      <a class="card" href="characters.html"><span class="number">01</span><h3>Characters</h3><p>People and figures documented in the Horizon universe.</p><span class="arrow">→</span></a>
-      <a class="card" href="spawn.html"><span class="number">02</span><h3>Spawn Encyclopedia</h3><p>A structured archive for confirmed Spawn entries.</p><span class="arrow">→</span></a>
-      <a class="card" href="locations.html"><span class="number">03</span><h3>Locations</h3><p>Places and regions documented in the series.</p><span class="arrow">→</span></a>
-      <a class="card" href="history.html"><span class="number">04</span><h3>World History</h3><p>Confirmed historical information from the Horizon universe.</p><span class="arrow">→</span></a>
-      <a class="card" href="aether.html"><span class="number">05</span><h3>Aether</h3><p>The dedicated archive for confirmed Aether information.</p><span class="arrow">→</span></a>
-      <a class="card" href="relics.html"><span class="number">06</span><h3>Relics</h3><p>A database for confirmed Relic entries and information.</p><span class="arrow">→</span></a>
-      <a class="card" href="timeline.html"><span class="number">07</span><h3>Timeline</h3><p>A chronological archive ready for confirmed events.</p><span class="arrow">→</span></a>
-      <a class="card" href="books.html"><span class="number">08</span><h3>Books</h3><p>The official Horizon book archive.</p><span class="arrow">→</span></a>
-    </section>
-  </main>
-
-  <footer>
-    <span>HORIZON INDEX</span>
-    <span>VERSION 1.0 · DATABASE FOUNDATION</span>
-  </footer>
-  <script src="script.js"></script>
+<footer><span>HORIZON INDEX</span><span>ARCHIVE SYSTEM / ONLINE</span></footer>
+<script src="script.js"></script>
 </body>
 </html>
