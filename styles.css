@@ -81,3 +81,42 @@ footer{border-top:1px solid var(--line);padding:25px clamp(20px,5vw,72px);displa
 .star-o{font-size:.76em;color:var(--red2);width:.82em;text-align:center;line-height:1;transform:translateY(-.02em);text-shadow:0 0 24px rgba(224,74,81,.3)}
 .index-logo{font:700 clamp(17px,2.1vw,27px)/1 "Space Grotesk";letter-spacing:.48em;color:#8b8e95;margin:18px 0 0 5px}
 .wordmark + p{margin-top:0}
+
+/* Character archive */
+.character-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.character-card { overflow: hidden; text-decoration: none; color: inherit; padding: 0; }
+.character-card:hover { transform: translateY(-4px); }
+.character-card .card-art { border-bottom: 1px solid var(--line, rgba(255,255,255,.09)); }
+.placeholder-art { min-height: 180px; display: grid; place-items: center; background:
+radial-gradient(circle at 50% 45%, rgba(180,35,35,.18), transparent 38%),
+linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.01)); }
+.placeholder-art span { font-size: 4.5rem; font-weight: 800; letter-spacing: -.08em; opacity: .8; }
+.placeholder-art.large { min-height: 330px; border: 1px solid var(--line, rgba(255,255,255,.09)); }
+.character-card .card-body { padding: 1.25rem; }
+.card-kicker { font-size: .68rem; letter-spacing: .16em; font-weight: 700; opacity: .55; }
+.character-card h2 { margin: .35rem 0 .35rem; }
+.character-card p { margin: 0; opacity: .68; line-height: 1.55; }
+.card-link { display: inline-block; margin-top: 1rem; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.card-link.muted { opacity: .4; }
+.entry-hero { display: grid; grid-template-columns: 320px 1fr; gap: 3rem; align-items: center; padding: 4rem 0 3rem; }
+.entry-hero h1 { margin: .25rem 0 .7rem; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -.05em; }
+.entry-lead { font-size: 1.15rem; line-height: 1.7; max-width: 650px; opacity: .72; }
+.entry-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 4rem; padding-bottom: 3rem; }
+.entry-meta { border-top: 1px solid var(--line, rgba(255,255,255,.09)); align-self: start; }
+.entry-meta div { padding: 1rem 0; border-bottom: 1px solid var(--line, rgba(255,255,255,.09)); }
+.entry-meta span { display:block; font-size:.62rem; letter-spacing:.15em; opacity:.45; margin-bottom:.35rem; }
+.entry-meta strong { font-size:.92rem; }
+.entry-content { max-width: 760px; }
+.lore-section { padding: 0 0 2.6rem; margin-bottom: 2.6rem; border-bottom: 1px solid var(--line, rgba(255,255,255,.09)); }
+.lore-section h2 { margin: .35rem 0 .8rem; font-size: 1.8rem; }
+.lore-section p { line-height: 1.8; opacity: .72; margin: 0; }
+.canon-note { display:flex; gap:1rem; padding:1.15rem; border:1px solid var(--line, rgba(255,255,255,.09)); background:rgba(255,255,255,.025); }
+.canon-note strong { color: var(--accent, #d33); white-space:nowrap; }
+.canon-note span { opacity:.65; line-height:1.5; }
+
+@media (max-width: 760px) {
+  .character-grid { grid-template-columns: 1fr; }
+  .entry-hero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2.5rem; }
+  .placeholder-art.large { min-height: 230px; }
+  .entry-layout { grid-template-columns: 1fr; gap: 2rem; }
+}
