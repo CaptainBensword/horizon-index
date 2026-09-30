@@ -41,7 +41,16 @@ main{max-width:1240px;margin:auto;padding:0 clamp(20px,5vw,72px) 80px}
 .card h3{font:600 20px "Space Grotesk";margin:42px 0 10px;max-width:210px}
 .card p{color:#858990;font-size:12px;line-height:1.55;max-width:220px}
 .arrow{position:absolute;right:22px;bottom:19px;color:#777;font-size:18px}
-footer{border-top:1px solid var(--line);padding:25px clamp(20px,5vw,72px);display:flex;justify-content:space-between;color:#5f6269;font-size:9px;letter-spacing:.13em}
+footer{border-top:1px solid var(--line);padding:30px clamp(20px,5vw,72px) 22px;color:#5f6269;font-size:9px;letter-spacing:.08em}
+.site-footer{margin-top:70px}
+.footer-main{display:flex;justify-content:space-between;gap:40px;padding-bottom:24px}
+.footer-brand{display:flex;flex-direction:column;gap:9px;max-width:430px}
+.footer-brand strong{color:#9b9ea5;font:700 12px "Space Grotesk";letter-spacing:.14em}
+.footer-brand span{color:#5f6269;font-size:10px;line-height:1.6;letter-spacing:.04em}
+.footer-links{display:flex;gap:22px;align-items:flex-start}
+.footer-links a{color:#777b82;text-decoration:none;font-size:9px;letter-spacing:.12em;transition:.18s ease}
+.footer-links a:hover{color:var(--text)}
+.footer-bottom{border-top:1px solid #202329;padding-top:17px;display:flex;justify-content:space-between;gap:20px;color:#4f535a;font-size:8px;letter-spacing:.11em}
 .page-hero{padding:75px 0 45px;border-bottom:1px solid var(--line)}
 .page-hero h1{font:600 clamp(42px,6vw,72px) "Space Grotesk";letter-spacing:-.06em;margin:15px 0}
 .page-hero p{color:#8e9198;max-width:600px;line-height:1.6}
@@ -60,7 +69,7 @@ footer{border-top:1px solid var(--line);padding:25px clamp(20px,5vw,72px);displa
  .search-wrap{height:58px}.search-wrap kbd{display:none}
  .card-grid{grid-template-columns:1fr}.card{min-height:185px}
  .section-heading{align-items:start}.count{margin-top:8px}
- footer{gap:12px;flex-direction:column}
+ footer{gap:12px;flex-direction:column}.footer-main,.footer-bottom{flex-direction:column}.footer-links{gap:16px}
 }
 
 
@@ -107,3 +116,16 @@ nav a.active:after{content:"";display:block;height:1px;background:var(--red2);ma
  .home-cta{align-items:flex-start;flex-direction:column}
  .cta-button{width:100%;justify-content:space-between}
 }
+
+
+/* Spawn records */
+.record-list{margin-top:28px;display:grid;gap:9px}
+.entry-row{display:grid;grid-template-columns:85px 1fr 25px;align-items:center;gap:20px;border:1px solid var(--line);padding:19px 20px;background:#0d1013;color:var(--text);text-decoration:none;transition:.18s ease}
+.entry-row:hover{border-color:#444950;background:#14171b;transform:translateY(-1px)}
+.entry-no{font:600 9px "Space Grotesk";color:var(--red2);letter-spacing:.08em}
+.entry-row h2{font:600 20px "Space Grotesk";margin:0 0 5px;letter-spacing:-.02em}
+.entry-row p{margin:0;color:#70747c;font-size:12px;line-height:1.55;max-width:720px}
+.entry-arrow{color:#555a62;font-size:17px;transition:.18s ease}
+.entry-row:hover .entry-arrow{color:var(--red2);transform:translate(2px,-1px)}
+.entry-row h2 small{font:700 8px "Inter";letter-spacing:.12em;color:var(--red2);vertical-align:middle;margin-left:8px}
+@media(max-width:720px){.entry-row{grid-template-columns:58px 1fr 15px;gap:12px;padding:17px}.entry-row h2{font-size:18px}.entry-row p{font-size:11px}}
