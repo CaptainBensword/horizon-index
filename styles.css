@@ -192,3 +192,73 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;back
   .detail-nav{flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+/* HORIZON INDEX 3.0.1 — Spawn navigation + record data cleanup */
+.site-header .brand,
+.site-header nav a,
+.back-inline,
+.detail-nav a,
+.footer-links a{ text-decoration:none !important; }
+
+.back-button{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  padding:10px 13px;
+  border:1px solid #30343b;
+  background:#111419;
+  color:#9da1a8 !important;
+  transition:.18s ease;
+}
+.back-button:hover{border-color:#555a63;background:#171a1f;color:var(--text) !important;transform:translateX(-2px)}
+
+.meta-item{
+  display:grid;
+  grid-template-columns:max-content 1fr;
+  align-items:baseline;
+  gap:7px;
+  padding:15px 0;
+}
+.meta-item span{
+  font-size:9px;
+  letter-spacing:.08em;
+  color:#70757d;
+  white-space:nowrap;
+}
+.meta-item strong{
+  font:500 13px/1.45 Inter,system-ui,sans-serif;
+  color:#dfe1e3;
+  letter-spacing:0;
+}
+
+.detail-nav{
+  align-items:center;
+  padding:20px 0 10px;
+}
+.detail-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:116px;
+  padding:11px 15px;
+  border:1px solid #30343b;
+  background:#111419;
+  color:#a1a5ac !important;
+  text-decoration:none !important;
+  font-size:10px;
+  letter-spacing:.1em;
+  transition:.18s ease;
+}
+.detail-button:hover{
+  border-color:#5a5f67;
+  background:#171a1f;
+  color:var(--text) !important;
+  transform:translateY(-2px);
+}
+.detail-button-center{border-color:#3a3e46;color:#d5d7da !important}
+@media(max-width:760px){
+  .detail-nav{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .detail-button{width:100%;min-width:0}
+  .detail-button-center{grid-column:1 / -1;grid-row:1}
+}
