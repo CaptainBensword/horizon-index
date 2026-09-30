@@ -87,7 +87,7 @@ const scan=document.createElement('div');
 scan.className='scan-line';
 document.body.appendChild(scan);
 
-// Interactive timeline: only uses historical information already documented on the Home page.
+// Interactive timeline: uses confirmed Horizon world-history information only.
 const timeline = document.querySelector('[data-interactive-timeline]');
 if(timeline){
   const markers=[...timeline.querySelectorAll('.timeline-marker')];
