@@ -19,17 +19,7 @@ const spawnRecords = [
   ["Burrowers","spawn-burrowers.html","Stocky underground Spawn with reinforced heads and powerful digging limbs that create tunnels."],
   ["Frosthorns","spawn-frosthorns.html","Large cold-weather Spawn with thick hides and prominent horns, adapted to freezing environments and snow."],
   ["Dusk Stalkers","spawn-dusk-stalkers.html","Quiet nocturnal Spawn that rely heavily on their senses and are rarely seen during daylight."],
-  ["Deepmaw","spawn-deepmaw.html","An enormous deep-ocean Spawn with black skin and a massive Venus flytrap-like body. It can swallow entire ships and produces a deep, eerie sound that can be heard through the ocean."]
-];
-
-const relicRecords = [
-  ["Blaise's First Relic", "relics.html#blaise-first-relic", "A Relic that boosts Blaise's speed and perception, with a drawback after about four minutes."],
-  ["Thunder", "relics.html#thunder", "A very strong Legend Relic bonded to Rowan, with a full mind inside Rowan's head."],
-  ["Leyl", "relics.html#leyl", "An extremely powerful Relic that always has a master and usually kills its masters."],
-  ["Lirium", "relics.html#leyl", "The red version created when Blaise later purifies Leyl."],
-  ["Havoc", "relics.html#havoc", "King Dread's mace Relic."],
-  ["Loyal Glaive", "relics.html#loyal-glaive", "Elaira's Relic, capable of suppressing most Relics."],
-  ["Hunter's Bow", "relics.html#hunters-bow", "Elliot's spider-themed bow that can generate many different types of arrow tips."]
+  ["Deepmaw","spawn-deepmaw.html","An enormous deep-ocean Spawn with black skin and a massive Venus flytrap-like body. It can swallow entire ships and produces a deep, eerie sound reminiscent of the Bloop."]
 ];
 
 function toggleMenu(){
@@ -44,11 +34,9 @@ function searchSite(value){
 
   const sectionMatches=pages.filter(p=>`${p[0]} ${p[2]}`.toLowerCase().includes(q));
   const spawnMatches=spawnRecords.filter(p=>`${p[0]} ${p[2]}`.toLowerCase().includes(q));
-  const relicMatches=relicRecords.filter(p=>`${p[0]} ${p[2]}`.toLowerCase().includes(q));
   const results=[
     ...sectionMatches.map(p=>({name:p[0],url:p[1],kind:"SECTION",desc:p[2]})),
-    ...spawnMatches.map(p=>({name:p[0],url:p[1],kind:"SPAWN",desc:p[2]})),
-    ...relicMatches.map(p=>({name:p[0],url:p[1],kind:"RELIC",desc:p[2]}))
+    ...spawnMatches.map(p=>({name:p[0],url:p[1],kind:"SPAWN",desc:p[2]}))
   ];
 
   if(!results.length){

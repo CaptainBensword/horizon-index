@@ -573,36 +573,3 @@ nav a.active:after{position:absolute;left:12px;right:12px;bottom:4px;margin:0;he
  .timeline-detail-mark{width:42px;height:42px}
  .timeline-detail h2{font-size:22px}
 }
-
-
-/* HORIZON INDEX 3.4 — Relics + hidden discoveries */
-.relic-intro{display:grid;grid-template-columns:minmax(220px,.75fr) 1.25fr;gap:35px;padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
-.relic-intro h2{font:600 30px "Space Grotesk";margin:8px 0 0;letter-spacing:-.04em}
-.relic-intro p{margin:0;color:#858a92;line-height:1.75;font-size:13px;max-width:760px}
-.relic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
-.relic-card{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(145deg,#15181d,#0e1115);padding:25px;box-shadow:0 10px 28px rgba(0,0,0,.12);transition:.2s ease}
-.relic-card:hover{border-color:#50555e;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.2)}
-.relic-card:after{content:"";position:absolute;right:-55px;bottom:-60px;width:145px;height:145px;border-radius:50%;border:1px solid rgba(198,59,66,.12);pointer-events:none}
-.relic-card-top{display:flex;justify-content:space-between;gap:15px;align-items:center}
-.relic-status{font-size:8px;letter-spacing:.14em;color:#777d85}
-.relic-card h2{font:600 27px "Space Grotesk";margin:20px 0 10px;letter-spacing:-.04em}
-.relic-summary{color:#9a9ea5;line-height:1.65;font-size:13px;max-width:650px}
-.relic-data{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
-.relic-data>div{border-top:1px solid #292e35;padding-top:10px}
-.relic-data span{display:block;color:#646a72;font-size:8px;letter-spacing:.12em;margin-bottom:6px}
-.relic-data strong{display:block;color:#d8dade;font:500 12px/1.45 "Space Grotesk"}
-.relic-note{color:#747a82;font-size:11px;line-height:1.55;margin:20px 0 0;max-width:700px}
-.relic-feature{grid-column:1/-1}
-.lirium-panel{margin-top:24px;padding:20px;border:1px solid rgba(224,74,81,.2);background:linear-gradient(135deg,rgba(224,74,81,.045),rgba(255,255,255,.01))}
-.lirium-panel h3{font:600 25px "Space Grotesk";margin:8px 0}
-.lirium-panel p{margin:0;color:#858a92;font-size:12px;line-height:1.6}
-.secret-link{color:#5c6169;text-decoration:none;transition:.2s ease}
-.secret-link:hover{color:var(--red2);text-shadow:0 0 12px rgba(255,83,92,.35)}
-.fact-card .secret-link{position:absolute;right:14px;bottom:12px;font-size:9px;opacity:.24}
-.fact-card .secret-link:hover{opacity:1}
-.archive-secret{display:block;width:max-content;margin:14px 0 0 auto;color:#454a52;text-decoration:none;font-size:8px;transition:.2s ease}
-.archive-secret:hover{color:var(--red2);text-shadow:0 0 12px rgba(255,83,92,.35)}
-.secret-link-note{display:inline-grid!important;place-items:center;text-decoration:none!important}
-.secret-page{min-height:260px}
-@media(max-width:800px){.relic-intro{grid-template-columns:1fr;gap:14px}.relic-grid{grid-template-columns:1fr}.relic-feature{grid-column:auto}.relic-data{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.relic-data{grid-template-columns:1fr}}
