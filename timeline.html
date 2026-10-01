@@ -1,27 +1,58 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Timeline · Horizon Index</title>
-<meta name="description" content="Horizon Index — the official encyclopedia for the Horizon book series.">
-<link rel="stylesheet" href="styles.css"></head><body>
-    <header class="site-header">
-      <a class="brand" href="index.html"><span class="brand-mark"><span>H</span></span>
-      <span class="brand-type">HORIZON <small>INDEX</small></span></a>
-      <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
-      <nav id="nav">
-        <a href="index.html">Home</a><a href="spawn.html">Spawn</a><a href="aether.html">Aether</a>
-        <a href="relics.html">Relics</a><a href="locations.html">Locations</a><a href="history.html">History</a>
-        <a href="timeline.html">Timeline</a><a href="books.html">Books</a>
-      </nav>
-    </header>
-    <main>
-<section class="page-hero"><span class="eyebrow">HORIZON INDEX / TIMELINE</span><h1>Timeline</h1><p>A chronological view of confirmed world history. Character-specific story beats are kept out of this world-history timeline.</p></section>
-<section class="timeline">
-<div class="event"><span class="date">~2,000 YEARS BEFORE BLAISE</span><h3>Earth before the First Spawn</h3><p>Earth is essentially like present-day Earth.</p></div>
-<div class="event"><span class="date">THE FIRST SPAWN</span><h3>Five gigantic beasts emerge</h3><p>The First Spawn crawl from the oceans and devastate civilization.</p></div>
-<div class="event"><span class="date">THE DIVERGENCE</span><h3>Earth becomes archipelagos</h3><p>The 3rd Guardian tears Earth into islands and archipelagos.</p></div>
-<div class="event"><span class="date">AFTER THE FIRST SPAWN</span><h3>Aether Essence remains</h3><p>The First Spawn lose their power and leave Aether Essence behind.</p></div>
-<div class="event"><span class="date">THE FIVE RULERS</span><h3>Essence is absorbed</h3><p>Five people absorb Aether Essence and become powerful rulers or beings associated with major archipelagos.</p></div>
-<div class="event"><span class="date">THE PRESENT ERA</span><h3>The Horizon world</h3><p>Most ancient technology is gone, while Aether, Spawn, Relics, ships, and ruins remain part of the world.</p></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline · Horizon Index</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" sizes="64x64" href="horizon-star-64.png">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark"><img src="horizon-star.png" alt="Horizon Index logo"></span><span class="brand-type"><span class="mini-horizon">HORIZON</span> <b>INDEX</b></span></a>
+<button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
+<nav id="nav">
+<a href="index.html">Home</a><a class="active" href="archive.html">Index</a><a href="books.html">Books</a><a href="timeline.html">Timeline</a>
+</nav></header>
+<main>
+<section class="page-hero"><span class="eyebrow">HORIZON INDEX / ARCHIVE</span><h1>Timeline</h1><p>Explore the confirmed historical overview currently documented in the Horizon Index.</p></section>
+
+<section class="timeline-explorer" data-interactive-timeline aria-label="Interactive Horizon timeline">
+  <div class="timeline-topline"><span class="eyebrow">INTERACTIVE TIMELINE</span><span class="timeline-position" data-timeline-position></span></div>
+  <div class="timeline-track" role="presentation">
+    <button class="timeline-marker" type="button" data-position="Around 2,000 years ago" data-title="Earth before the First Spawn" data-body="Around 2,000 years before the main story, Earth was a modern world before the events that reshaped it." aria-label="Earth before the First Spawn">
+      <span class="marker-dot">◈</span><span class="marker-label">Before the First Spawn</span>
+    </button>
+    <button class="timeline-marker" type="button" data-position="Around 2,000 years ago" data-title="The First Spawn emerge" data-body="Five giant First Spawn beasts emerged from the oceans and devastated civilization." aria-label="The First Spawn emerge">
+      <span class="marker-dot">◈</span><span class="marker-label">First Spawn</span>
+    </button>
+    <button class="timeline-marker" type="button" data-position="After the First Spawn emerge" data-title="Civilization is devastated" data-body="The First Spawn devastated civilization, leaving the surviving world dramatically changed." aria-label="Civilization is devastated">
+      <span class="marker-dot">◈</span><span class="marker-label">Civilization</span>
+    </button>
+    <button class="timeline-marker" type="button" data-position="During the events surrounding the Third Guardian" data-title="The world is torn into archipelagos" data-body="The Third Guardian tore the world into archipelagos during the events that followed the devastation." aria-label="The world is torn into archipelagos">
+      <span class="marker-dot">◈</span><span class="marker-label">Archipelagos</span>
+    </button>
+    <button class="timeline-marker" type="button" data-position="After the world becomes archipelagos" data-title="The First Spawn lose their power" data-body="The First Spawn later lost their power and shattered, leaving Aether Essence behind." aria-label="The First Spawn lose their power">
+      <span class="marker-dot">◈</span><span class="marker-label">Aether Essence</span>
+    </button>
+    <button class="timeline-marker" type="button" data-position="After the First Spawn shatter" data-title="Five rulers absorb Aether Essence" data-body="Five people absorbed Aether Essence and became the rulers of the five main archipelagos." aria-label="Five rulers absorb Aether Essence">
+      <span class="marker-dot">◈</span><span class="marker-label">Five Rulers</span>
+    </button>
+  </div>
+  <div class="timeline-detail">
+    <div class="timeline-detail-mark">◈</div>
+    <div><span class="eyebrow">SELECTED RECORD</span><h2 data-timeline-title></h2><p data-timeline-body></p></div>
+  </div>
+  <p class="timeline-note">This interactive overview only surfaces confirmed world-history information currently documented in the Index. More detailed records can be added as the history is confirmed.</p>
 </section>
+
+<a class="back" href="archive.html">← Return to Index</a>
 </main>
-<footer><span>HORIZON INDEX</span><span>VERSION 3.4 · DATABASE</span></footer>
-<script src="script.js"></script></body></html>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand"><strong>HORIZON INDEX</strong><span>The official encyclopedia and database for the Horizon book series.</span></div>
+    <div class="footer-links"><a href="index.html">Home</a><a href="archive.html">Index</a><a href="books.html">Books</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Horizon Index. All rights reserved.</span><span>VERSION 3.4</span></div>
+</footer>
+<script src="script.js"></script>
+</body></html>
